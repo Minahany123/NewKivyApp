@@ -1,0 +1,2252 @@
+MainScreen:
+	Password:
+	Error:
+	Story1:
+	horror:
+	romantic:
+	khaial:
+	action:
+	aljas:
+	papy:
+	horror1:
+	horror2:
+	horror3:
+	horror4:
+	horror5:
+	horror6:
+	romantic1:
+	romantic2:
+	romantic3:
+	romantic4:
+	romantic5:
+	romantic6:
+	khaial1:
+	khaial2:
+	khaial3:
+	khaial4:
+	khaial5:
+	khaial6:
+	action1:
+	action2:
+	action3:
+	action4:
+	action5:
+	action6:
+	aljas1:
+	aljas2:
+	aljas3:
+	aljas4:
+	aljas5:
+	aljas6:
+	papy1:
+	papy2:
+	papy3:
+	papy4:
+	papy5:
+	papy6:
+	kalam:
+<Password>:
+	name : 'main'
+	BoxLayout:
+        orientation: 'vertical'
+
+        canvas.before:
+            Rectangle:
+                source: '/storage/emulated/0/story/IMG_20241018_043221_028.jpg'
+                pos: self.pos
+                size: self.size
+	GridLayout:
+		cols : 1
+		GridLayout:
+			rows : 3
+			Label:
+				text : root.arabic_text
+				font_size: 80
+				pos_hint : {'x': 0.5 , 'y': 0.9}
+				font_name : 'Amiri-Bold.ttf'
+			#Image:
+				#source: '/storage/emulated/0/Pictures/Telegram/IMG_20241018_043221_028.jpg'
+				#pos_hint : {'x': 0.5 , 'y': 0.8}
+			Label:
+				text : ""
+				font_size: 80
+				color: (1,0,0,180/255.0)
+				size_hint: (0.1 , 0.3)
+				font_name : 'Amiri-Bold.ttf'
+			TextInput:
+				id: pasa
+				hint_text: 'Password'
+				multiline: False
+				background_color: (0,0,0,100/255.0)
+				size_hint : (0.1 , 0.2)
+		Button:
+			text: root.arabik_text
+			font_size: 50
+			font_name : 'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,180/255.0)
+			on_release:
+				app.root.current = 'storys' if pasa.text == 'roro' else 'error'
+				root.manager.transition.direction = 'up' 
+<Story1>:
+	name: 'storys'
+	BoxLayout:
+        orientation: 'horizontal'
+
+        canvas.before:
+            Rectangle:
+                source: '/storage/emulated/0/story/IMG_٢٠٢٤١٠٢٩_١٤٤٢٠٣.jpg'
+                pos: self.pos
+                size: self.size
+	GridLayout:
+		cols : 1
+		GridLayout:
+			rows : 2
+			Label:
+				text: ''
+				font_size : 50
+		#	Image:
+#				source: BoxLayout:
+#        orientation: 'vertical'
+
+#        canvas.before:
+#            Rectangle:
+#                source: '/storage/emulated/0/Pictures/Telegram/IMG_٢٠٢٤١٠٢٩_١٤٤٢٠٣.jpg'
+#                pos: self.pos
+#                size: self.size
+#				pos_hint : {'x': 0.5 , 'y': 0.8}
+#				size_hint : (1 ,1)
+			Label:
+				id: button8
+				font_name:  'Amiri-Bold.ttf'
+				font_size: 65
+		GridLayout:
+			cols : 2
+			rows: 3
+			Button:
+				id: button1
+				font_name: 'Amiri-Bold.ttf'
+				font_size: 65
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'Horror'
+					root.manager.transition.direction = 'right'
+			Button:
+				id: button2
+				font_name: 'Amiri-Bold.ttf'
+				font_size: 65
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'Romantic'
+					root.manager.transition.direction = 'left'
+			Button:
+				id: button3
+				font_name:  'Amiri-Bold.ttf'
+				font_size: 65
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'Khaial'
+					root.manager.transition.direction = 'right'	
+			Button:
+				id: button4
+				font_name:  'Amiri-Bold.ttf'
+				font_size: 65
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'Action'
+					root.manager.transition.direction = 'left'
+			Button:
+				id: button5
+				font_size: 65
+				font_name:  'Amiri-Bold.ttf'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'Aljas'
+					root.manager.transition.direction = 'right'
+			Button:
+				id: button6
+				font_size: 65
+				font_name:  'Amiri-Bold.ttf'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'Papy'
+					root.manager.transition.direction = 'left'
+		Button:
+			id: button9
+			font_name: 'Amiri-Bold.ttf'
+			font_size: 65
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Kalam'
+				root.manager.transition.direction = 'up'			
+		Button:
+			id: button7
+			font_size: 65
+			font_name:  'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'main'
+				root.manager.transition.direction = 'down'
+<Error>:
+	name : 'error'
+	BoxLayout:
+        orientation: 'vertical'
+
+        canvas.before:
+            Rectangle:
+                source: '/storage/emulated/0/story/IMG_٢٠٢٤١٠٢٩_١٤٢٢١١.jpg'
+                pos: self.pos
+                size: self.size
+	GridLayout:
+		cols : 1
+		GridLayout:
+			rows : 3
+			#Image:
+#				source: '/storage/emulated/0/DCIM/Screenshots/IMG_٢٠٢٤١٠٢٧_١١٤٤١٣.jpg'
+#				size_hint: (0.5 , 0.8)
+			Label:
+				text: ''
+				font_size: 65
+				pos_hint : {'x': 0.3 , 'y': 0.4}
+			Label:
+				id: button1
+				font_name:  'Amiri-Bold.ttf'
+				font_size: 65
+				pos_hint : {'x': 0.3 , 'y': 0.4}
+		Button:
+			id: button2
+			font_name:  'Amiri-Bold.ttf'
+			font_size: 65
+			size_hint : (0.2 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'main'
+				root.manager.transition.direction = 'down'
+<horror>:
+	name : 'Horror'
+	BoxLayout:
+        orientation: 'horizontal'
+
+        canvas.before:
+            Rectangle:
+                source: '/storage/emulated/0/story/تنزيل (5).jpeg'
+                pos: self.pos
+                size: self.size
+	GridLayout:
+		cols : 1
+		GridLayout:
+#			rows : 1
+#			Label:
+#				text: 'm'
+				#font_size : 50
+		GridLayout:
+			cols : 2
+			rows: 3
+			Button:
+				id: button1
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'HORROR1'
+					root.manager.transition.direction = 'right'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button2
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'HORROR2'
+					root.manager.transition.direction = 'left'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button3
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'HORROR3'
+					root.manager.transition.direction = 'right'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button4
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'HORROR4'
+					root.manager.transition.direction = 'left'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button5
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'HORROR5'
+					root.manager.transition.direction = 'right'
+			Button:
+				id: button6
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'HORROR6'
+					root.manager.transition.direction = 'left'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+		Button:
+			id: button7
+			font_name: 'Amiri-Bold.ttf'
+			font_size: 65
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'storys'
+				root.manager.transition.direction = 'left'
+<romantic>:
+	name : 'Romantic'
+	BoxLayout:
+        orientation: 'horizontal'
+
+        canvas.before:
+            Rectangle:
+                source: '/storage/emulated/0/story/Picsart_24-10-30_00-34-08-643.jpg'
+                pos: self.pos
+                size: self.size
+	GridLayout:
+		cols : 1
+		GridLayout:
+			rows : 1
+			Label:
+				text: ''
+				font_size : 50
+		GridLayout:
+			cols : 2
+			rows: 3
+			Button:
+				id: button8
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ROMANTIC1'
+					root.manager.transition.direction = 'right'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button9
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ROMANTIC2'
+					root.manager.transition.direction = 'left'
+			Button:
+				id: button10
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ROMANTIC3'
+					root.manager.transition.direction = 'right'
+			Button:
+				id: button11
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ROMANTIC4'
+					root.manager.transition.direction = 'left'
+			Button:
+				id: button12
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ROMANTIC5'
+					root.manager.transition.direction = 'right'
+			Button:
+				id: button13
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ROMANTIC6'
+					root.manager.transition.direction = 'left'
+		Button:
+			id: button14
+            font_size: 65
+            font_name: 'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'storys'
+				root.manager.transition.direction = 'right'
+<khaial>:
+	name : 'Khaial'
+	BoxLayout:
+        orientation: 'horizontal'
+
+        canvas.before:
+            Rectangle:
+                source: '/storage/emulated/0/story/Picsart_24-10-30_00-28-45-750.jpg'
+                pos: self.pos
+                size: self.size
+	GridLayout:
+		cols : 1
+		GridLayout:
+			rows : 1
+			Label:
+				text: ''
+				font_size : 50
+		GridLayout:
+			cols : 2
+			rows: 3
+			Button:
+				id: button1
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'KHAIAL1'
+					root.manager.transition.direction = 'right'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button2
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'KHAIAL2'
+					root.manager.transition.direction = 'left'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button3
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'KHAIAL3'
+					root.manager.transition.direction = 'right'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button4
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'KHAIAL4'
+					root.manager.transition.direction = 'left'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button5
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'KHAIAL5'
+					root.manager.transition.direction = 'right'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button6
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'KHAIAL6'
+					root.manager.transition.direction = 'left'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+		Button:
+			id: button7
+            font_size: 65
+            font_name: 'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'storys'
+				root.manager.transition.direction = 'left'
+<action>:
+	name : 'Action'
+	BoxLayout:
+        orientation: 'horizontal'
+
+        canvas.before:
+            Rectangle:
+                source: '/storage/emulated/0/story/Picsart_24-10-30_00-24-54-034.jpg'
+                pos: self.pos
+                size: self.size
+	GridLayout:
+		cols : 1
+		GridLayout:
+			rows : 1
+			Label:
+				text: ''
+				font_size : 50
+		GridLayout:
+			cols : 2
+			rows: 3
+			Button:
+				id: button1
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ACTION1'
+					root.manager.transition.direction = 'right'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button2
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ACTION2'
+					root.manager.transition.direction = 'left'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button3
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ACTION3'
+					root.manager.transition.direction = 'right'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button4
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ACTION4'
+					root.manager.transition.direction = 'left'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button5
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ACTION5'
+					root.manager.transition.direction = 'right'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button6
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ACTION6'
+					root.manager.transition.direction = 'left'
+				background_color: (1,1,1,50/255.0)
+		Button:
+			id: button7
+            font_name: 'Amiri-Bold.ttf'
+            font_size: 65
+            size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'storys'
+				root.manager.transition.direction = 'right'
+				background_color: (1,1,1,50/255.0)
+<aljas>:
+	name : 'Aljas'
+	BoxLayout:
+        orientation: 'horizontal'
+
+        canvas.before:
+            Rectangle:
+                source: '/storage/emulated/0/story/Picsart_24-10-30_00-30-07-163.jpg'
+                pos: self.pos
+                size: self.size
+	GridLayout:
+		cols : 1
+		GridLayout:
+			rows : 1
+			Label:
+				text: ''
+				font_size : 50
+		GridLayout:
+			cols : 2
+			rows: 3
+			Button:
+				id: button1
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	font_size : 50
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ALJAS1'
+					root.manager.transition.direction = 'right'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button2
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	font_size : 50
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ALJAS2'
+					root.manager.transition.direction = 'left'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button3
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	font_size : 50
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ALJAS3'
+					root.manager.transition.direction = 'right'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button4
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	font_size : 50
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ALJAS4'
+					root.manager.transition.direction = 'left'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button5
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	font_size : 50
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ALJAS5'
+					root.manager.transition.direction = 'right'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button6
+            	#font_size: 24
+            	font_name: 'Amiri-Bold.ttf'
+            	font_size : 50
+            	size_hint : (0.1 , 0.3)
+            	#halign: 'center'
+#            	valign: 'middle'
+#            	size_hint_y: None
+#            	height: 50
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'ALJAS6'
+					root.manager.transition.direction = 'left'
+				size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+		Button:
+			id: button7
+            font_size: 65
+            font_name: 'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'storys'
+				root.manager.transition.direction = 'left'
+<papy>:
+	name : 'Papy'
+	BoxLayout:
+        orientation: 'horizontal'
+
+        canvas.before:
+            Rectangle:
+                source: '/storage/emulated/0/story/Picsart_24-10-30_00-27-08-056.jpg'
+                pos: self.pos
+                size: self.size
+	GridLayout:
+		cols : 1
+		GridLayout:
+			rows : 1
+			Label:
+				text: ''
+				font_size : 50
+		GridLayout:
+			cols : 2
+			rows: 3
+			Button:
+				id: button1
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'PAPY1'
+					root.manager.transition.direction = 'right'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button2
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'PAPY2'
+					root.manager.transition.direction = 'left'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button3
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'PAPY3'
+					root.manager.transition.direction = 'right'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button4
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'PAPY4'
+					root.manager.transition.direction = 'left'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button5
+            	font_size: 50
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'PAPY5'
+					root.manager.transition.direction = 'right'
+				background_color: (1,1,1,50/255.0)
+			Button:
+				id: button6
+            	font_name: 'Amiri-Bold.ttf'
+            	size_hint : (0.1 , 0.3)
+				background_color: (1,1,1,50/255.0)
+				on_release:
+					app.root.current = 'PAPY6'
+					root.manager.transition.direction = 'left'
+				background_color: (1,1,1,50/255.0)
+		Button:
+			id: button7
+            font_name: 'Amiri-Bold.ttf'
+            font_size: 65
+            size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'storys'
+				root.manager.transition.direction = 'right'
+				background_color: (1,1,1,50/255.0)
+<horror1>:
+    name: 'HORROR1'
+    BoxLayout:
+        orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+        
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Horror' 
+				root.manager.transition.direction = 'left'
+<horror2>:
+    name: 'HORROR2'
+    BoxLayout:
+        orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label2
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Horror' 
+				root.manager.transition.direction = 'right'
+<horror3>:
+    name: 'HORROR3'
+    BoxLayout:
+        orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label3
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Horror' 
+				root.manager.transition.direction = 'left'
+<horror4>:
+    name: 'HORROR4'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label4
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Horror' 
+				root.manager.transition.direction = 'right'
+<horror5>:
+    name: 'HORROR5'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label5
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Horror' 
+				root.manager.transition.direction = 'left'
+<horror6>:
+    name: 'HORROR6'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label6
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Horror' 
+				root.manager.transition.direction = 'right'
+<romantic1>:
+	name: 'ROMANTIC1'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label7
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Romantic' 
+				root.manager.transition.direction =  'left'
+<romantic2>:
+	name: 'ROMANTIC2'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label8
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Romantic' 
+				root.manager.transition.direction =  'right'
+<romantic3>:
+	name: 'ROMANTIC3'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label9
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Romantic' 
+				root.manager.transition.direction = 'left'
+<romantic4>:
+	name: 'ROMANTIC4'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label10
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Romantic' 
+				root.manager.transition.direction =  'right' 
+<romantic5>:
+	name: 'ROMANTIC5'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label11
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name: 'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Romantic' 
+				root.manager.transition.direction = 'left'
+<romantic6>:
+	name: 'ROMANTIC6'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label12
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+            	#font_size: 24
+            font_name: 'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Romantic'
+				root.manager.transition.direction = 'right'
+<khaial1>:
+	name: 'KHAIAL1'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label19
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Khaial'
+				root.manager.transition.direction = 'left'				
+<khaial2>:
+	name: 'KHAIAL2'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label20
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Khaial'
+				root.manager.transition.direction = 'right'		
+<khaial3>:
+	name: 'KHAIAL3'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label21
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Khaial'
+				root.manager.transition.direction = 'left'								
+<khaial4>:
+	name: 'KHAIAL4'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label22
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Khaial'
+				root.manager.transition.direction = 'right'						
+<khaial5>:
+	name: 'KHAIAL5'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label23
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Khaial'
+				root.manager.transition.direction = 'left'						
+<khaial6>:
+	name: 'KHAIAL6'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label24
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Khaial'
+				root.manager.transition.direction = 'right'						
+<action1>:
+	name: 'ACTION1'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label13
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+            	#font_size: 24
+            font_name: 'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Action'
+				root.manager.transition.direction = 'left'
+<action2>:
+	name: 'ACTION2'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label14
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+            	#font_size: 24
+            font_name: 'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Action'
+				root.manager.transition.direction = 'right'
+<action3>:
+	name: 'ACTION3'
+    BoxLayout:
+    	orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label15
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right'
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+            font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Action'
+				root.manager.transition.direction =  'left'
+<action4>:
+	name: 'ACTION4'
+    BoxLayout:
+        orientation:  'vertical'
+
+#       إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+       	     pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label16
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right'
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Action'
+				root.manager.transition.direction =  'right'
+<action5>:
+	name: 'ACTION5'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label17
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right'
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Action'
+				root.manager.transition.direction =  'left'
+<action6>:
+	name: 'ACTION6'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label18
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Action'
+				root.manager.transition.direction = 'right'
+<aljas1>:
+	name: 'ALJAS1'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label25
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Aljas'
+				root.manager.transition.direction = 'left'				
+<aljas2>:
+	name: 'ALJAS2'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label26
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Aljas'
+				root.manager.transition.direction = 'right'		
+<aljas3>:
+	name: 'ALJAS3'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label27
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Aljas'
+				root.manager.transition.direction = 'left'								
+<aljas4>:
+	name: 'ALJAS4'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label28
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Aljas'
+				root.manager.transition.direction = 'right'						
+<aljas5>:
+	name: 'ALJAS5'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label29
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Aljas'
+				root.manager.transition.direction = 'left'						
+<aljas6>:
+	name: 'ALJAS6'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label30
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Aljas'
+				root.manager.transition.direction = 'right'
+<papy1>:
+	name: 'PAPY1'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label31
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+            	#font_size: 24
+            font_name: 'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Papy'
+				root.manager.transition.direction = 'left'
+<papy2>:
+	name: 'PAPY2'
+    BoxLayout:
+    	orientation: 'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label32
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name: 'Amiri-Bold.ttf'  # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign: 'right'
+                valign: 'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+            	#font_size: 24
+            font_name: 'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Papy'
+				root.manager.transition.direction = 'right'
+<papy3>:
+	name: 'PAPY3'
+    BoxLayout:
+    	orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label33
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right'
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+            font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.3)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Papy'
+				root.manager.transition.direction =  'left'
+<papy4>:
+	name: 'PAPY4'
+    BoxLayout:
+        orientation:  'vertical'
+
+#       إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+       	     pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label34
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right'
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current =  'Papy'
+				root.manager.transition.direction =  'right'
+<papy5>:
+	name: 'PAPY5'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label35
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right'
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf'
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Papy'
+				root.manager.transition.direction =  'left'
+<papy6>:
+	name: 'PAPY6'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label36
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'Papy'
+				root.manager.transition.direction = 'right'
+<kalam>:
+	name: 'Kalam'
+    BoxLayout:
+        orientation:  'vertical'
+
+        # إعداد الخلفية باستخدام Canvas
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1  # اللون الأحمر كخلفية (RGBA)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    GridLayout:
+        cols: 1
+
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            Label:
+                id: story_label37
+                text: ""  # سيتم ضبط النص من كود Python
+                font_size: 65
+                font_name:  'Amiri-Bold.ttf'   # تأكد من إضافة الخط المناسب
+                text_size: self.width, None
+                halign:  'right' 
+                valign:  'top'
+                size_hint_y: None
+                height: self.texture_size[1]
+		Button:
+			id: button
+			font_name:  'Amiri-Bold.ttf' 
+			size_hint : (0.1 , 0.2)
+			background_color: (1,1,1,50/255.0)
+			on_release:
+				app.root.current = 'storys'
+				root.manager.transition.direction = 'down'
