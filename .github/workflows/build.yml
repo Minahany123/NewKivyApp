@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout repository
       - uses: actions/checkout@v2
 
       # Get the current date
@@ -30,14 +31,15 @@ jobs:
           path: buildozer
           key: buildozer-${{ runner.os }}-${{ env.DATE }}-${{ hashFiles('**/buildozer.spec') }}
 
-      # Install dependencies
+      # Install dependencies and build APK
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
         with:
-          command: android debug
+          command: buildozer android debug
           buildozer_version: master
-          
+
+      # Upload APK as artifact
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
