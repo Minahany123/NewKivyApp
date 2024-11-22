@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository
       - uses: actions/checkout@v2
 
       # Get the current date
@@ -31,7 +30,25 @@ jobs:
           path: buildozer
           key: buildozer-${{ runner.os }}-${{ env.DATE }}-${{ hashFiles('**/buildozer.spec') }}
 
-      # Install dependencies and build APK
+      # Install Android SDK and tools
+      - name: Install Android SDK
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y openjdk-11-jdk unzip wget
+          wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip -O cmdline-tools.zip
+          mkdir -p $HOME/android-sdk/cmdline-tools
+          unzip cmdline-tools.zip -d $HOME/android-sdk/cmdline-tools
+          mv $HOME/android-sdk/cmdline-tools/cmdline-tools $HOME/android-sdk/cmdline-tools/latest
+          export ANDROID_HOME=$HOME/android-sdk
+          export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
+          export PATH=$ANDROID_HOME/platform-tools:$PATH
+          export PATH=$ANDROID_HOME/tools:$PATH
+          export PATH=$ANDROID_HOME/tools/bin:$PATH
+          yes | sdkmanager --licenses
+          sdkmanager "platform-tools" "platforms;android-29" "build-tools;30.0.3" "ndk;21.1.6352462" "cmdline-tools;latest"
+          sdkmanager "system-images;android-29;default;x86_64"
+
+      # Build with Buildozer
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
