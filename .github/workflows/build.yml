@@ -22,7 +22,7 @@ jobs:
       - name: Install Cython
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install cython==0.29.36  # يمكنك تحديد نسخة معينة إذا كنت بحاجة إلى ذلك
+          python3 -m pip install cython==0.29.36  # يمكنك تحديد النسخة المناسبة
 
       # إعداد Android SDK
       - name: Set up Android SDK
@@ -40,7 +40,7 @@ jobs:
           export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
           export PATH=$ANDROID_HOME/platform-tools:$PATH
           yes | sdkmanager --licenses
-          sdkmanager "platform-tools" "build-tools;30.0.3" "platforms;android-29"
+          sdkmanager "platform-tools" "build-tools;30.0.3" "platforms;android-29" "sources;android-29" "ndk;21.1.6352462"
 
       # تثبيت Buildozer
       - name: Install Buildozer
