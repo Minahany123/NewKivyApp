@@ -1,4 +1,3 @@
-
 name: CI
 
 on:
@@ -10,65 +9,53 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      # Get the current date
-      - name: Get Date
-        id: get-date
-        run: echo "DATE=$(date -u  +%Y%m%d )" >> $GITHUB_ENV
-
-      # Cache Buildozer global directory
-      - name: Cache Buildozer global directory
-        uses: actions/cache@v3
-        with:
-          path: buildozer_global
-          key: buildozer-global-${{ runner.os }}-${{ hashFiles( **/buildozer.spec ) }}
-
-      # Cache Buildozer build directory
-      - name: Cache Buildozer build directory
-        uses: actions/cache@v3
-        with:
-          path: buildozer
-          key: buildozer-${{ runner.os }}-${{ env.DATE }}-${{ hashFiles( **/buildozer.spec ) }}
-
-      # Install Android SDK
-      - name: Install Android SDK
+      # تثبيت المتطلبات الأساسية
+      - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y openjdk-11-jdk unzip wget
-          
-          # Download and install Android SDK tools
+          sudo apt-get install -y openjdk-11-jdk wget unzip
+
+      # إعداد Android SDK
+      - name: Set up Android SDK
+        run: |
+          # تحميل Android Command Line Tools
           wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O cmdline-tools.zip
           mkdir -p $HOME/android-sdk/cmdline-tools
           unzip cmdline-tools.zip -d $HOME/android-sdk/cmdline-tools
           mv $HOME/android-sdk/cmdline-tools/cmdline-tools $HOME/android-sdk/cmdline-tools/latest
-          
-          # Set environment variables
+
+          # ضبط متغيرات البيئة
+          echo "export ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
+          echo "export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH" >> $GITHUB_ENV
+          echo "export PATH=$ANDROID_HOME/platform-tools:$PATH" >> $GITHUB_ENV
+          echo "export PATH=$ANDROID_HOME/tools:$PATH" >> $GITHUB_ENV
+          echo "export PATH=$ANDROID_HOME/tools/bin:$PATH" >> $GITHUB_ENV
+
+          # تثبيت الأدوات المطلوبة
           export ANDROID_HOME=$HOME/android-sdk
           export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
           export PATH=$ANDROID_HOME/platform-tools:$PATH
-          export PATH=$ANDROID_HOME/tools:$PATH
-          export PATH=$ANDROID_HOME/tools/bin:$PATH
-
-          # Accept licenses and install required components
           yes | sdkmanager --licenses
-          sdkmanager "platform-tools" "platforms;android-29" "build-tools;30.0.3" "ndk;21.1.6352462" "cmdline-tools;latest"
-          sdkmanager "system-images;android-29;default;x86_64"
+          sdkmanager "platform-tools" "build-tools;30.0.3" "platforms;android-29"
 
-          # Check installation success
-          sdkmanager --list
+      # تثبيت Buildozer
+      - name: Install Buildozer
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install buildozer
 
-      # Build with Buildozer
+      # بناء المشروع
       - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
-        id: buildozer
-        with:
-          command: buildozer android debug
-          buildozer_version: master
+        run: |
+          buildozer android debug
+          ls -la ./bin
 
-      # Upload APK as artifact
-      - name: Upload artifacts
+      # رفع ملف APK
+      - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
-          name: package
-          path: dist/*.apk
+          name: Android APK
+          path: ./bin/*.apk
